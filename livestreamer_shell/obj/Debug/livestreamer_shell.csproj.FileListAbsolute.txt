@@ -1,0 +1,9 @@
+E:\Desktop\livestreamer_shell\livestreamer_shell\bin\Debug\livestreamer_shell.exe.config
+E:\Desktop\livestreamer_shell\livestreamer_shell\bin\Debug\livestreamer_shell.exe
+E:\Desktop\livestreamer_shell\livestreamer_shell\bin\Debug\livestreamer_shell.pdb
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Debug\livestreamer_shell.csprojResolveAssemblyReference.cache
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Debug\livestreamer_shell.Properties.Resources.resources
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Debug\livestreamer_shell.csproj.GenerateResource.Cache
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Debug\livestreamer_shell.exe
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Debug\livestreamer_shell.pdb
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Debug\livestreamer_shell.homeScreen.resources

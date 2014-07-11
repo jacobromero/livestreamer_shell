@@ -1,0 +1,11 @@
+E:\Desktop\livestreamer_shell\livestreamer_shell\bin\Release\livestreamer_shell.exe.config
+E:\Desktop\livestreamer_shell\livestreamer_shell\bin\Release\livestreamer_shell.exe
+E:\Desktop\livestreamer_shell\livestreamer_shell\bin\Release\livestreamer_shell.pdb
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.homeScreen.resources
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.Properties.Resources.resources
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.csproj.GenerateResource.Cache
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.exe
+E:\Desktop\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.pdb
+E:\Documents\GitHub\livestreamer_shell\livestreamer_shell\bin\Release\livestreamer_shell.exe.config
+E:\Documents\GitHub\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.exe
+E:\Documents\GitHub\livestreamer_shell\livestreamer_shell\obj\Release\livestreamer_shell.pdb
