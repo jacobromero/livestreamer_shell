@@ -50,12 +50,13 @@
             this.streamText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.streamText.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.streamText.ForeColor = System.Drawing.Color.DarkGray;
             this.streamText.Location = new System.Drawing.Point(200, 48);
             this.streamText.Name = "streamText";
             this.streamText.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.streamText.Size = new System.Drawing.Size(173, 20);
             this.streamText.TabIndex = 1;
+            this.streamText.Text = "Enter Stream Name Here";
             this.streamTip.SetToolTip(this.streamText, "Input only stream name here.\r\nExample: twitch.tv/sample_name = sample_name");
             // 
             // serviceName

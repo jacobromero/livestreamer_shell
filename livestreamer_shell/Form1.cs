@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,12 +24,28 @@ namespace livestreamer_shell
             InitializeComponent();
             serviceName.SelectedIndex = 0;
             serviceName.Focus();
+            this.streamText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(streamText_KeyPress);
+            this.streamText.Enter += new EventHandler(streamText_Enter);
+            this.streamText.LostFocus += new EventHandler(streamText_LostFocus);
+        }
+
+        private void streamText_LostFocus(object sender, EventArgs e)
+        {
+            streamText.Text = "Enter Stream Name Here";
+            streamText.ForeColor = Color.DarkGray;
+        }
+
+        private void streamText_Enter(object sender, EventArgs e)
+        {
+            streamText.Text = "";
+            streamText.ForeColor = Color.Black;
+            
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
             streamText.Text = "";
-            sourceButton.Checked = false;
+            sourceButton.Checked = true;
             highButton.Checked = false;
             mediumButton.Checked = false;
             lowButton.Checked = false;
@@ -38,10 +55,9 @@ namespace livestreamer_shell
         {
             try
             {
-                for (int i = 0; i < livestreamerArray.Count; i++)
+                foreach (var process in Process.GetProcessesByName("vlc"))
                 {
-                    livestreamerArray[i].StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
-                    livestreamerArray[i].CloseMainWindow();
+                    process.CloseMainWindow();
                 }
 
                 livestreamer_shell.homeScreen.ActiveForm.Close();
@@ -73,6 +89,8 @@ namespace livestreamer_shell
                 this.WindowState = FormWindowState.Minimized;
                 livestreamerArray[currentIndex].Start();
                 currentIndex++;
+                Thread.Sleep(3000);
+                checkForMediaPlayer();
             }
             else
             {
@@ -81,10 +99,25 @@ namespace livestreamer_shell
             
         }
 
+        private void checkForMediaPlayer()
+        {
+            var check = true;
+            
+            while (check)
+            {
+                var processes = Process.GetProcessesByName("vlc");
+                if (processes.Length == 0)
+                {
+                    check = false;
+                }
+            }
+            this.WindowState = FormWindowState.Normal;
+        }
+
         private string checkRadioButtons()
         {
             if (sourceButton.Checked == true)
-            {
+            {                
                 return "best";
             }
             else if(highButton.Checked == true)
@@ -103,6 +136,20 @@ namespace livestreamer_shell
             {
                 return "null";
             } 
+        }
+
+        private void livestreamer_shell_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            button3_Click(sender, e);
+        }
+
+        private void streamText_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                acceptButton_Click(sender, e);
+                e.Handled = true;
+            }
         }
     }
 }
